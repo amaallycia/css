@@ -10,7 +10,7 @@ h3.innerHTML = `${day},${hours}:${minutes}`;
 function displayWeatherCondition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("h4").innerHTML = Math.round(response.data.main.temp);
-  icon.setAttribute(
+  iconElement.setAttribute(
     "src",
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
@@ -37,7 +37,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-let iconElement = document.querySelector("icon");
+let iconElement = document.querySelector("h2");
 let h5 = document.querySelector("h5");
 h5.addEventListener("submit", handleSubmit);
 
