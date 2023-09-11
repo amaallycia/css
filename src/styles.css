@@ -19,7 +19,7 @@ h1 {
   font-weight: bolder;
   font-family: "Kanit", sans-serif;
   position: relative;
-  top: 170px;
+  top: 130px;
 }
 
 h2 {
@@ -27,10 +27,11 @@ h2 {
   text-align: center;
   font-size: 50px;
 }
-.rain {
+img {
   color: #ededf7;
-  font-size: 120px;
+  font-size: 150px;
   padding-left: 110px;
+  width: 20%;
 }
 form {
   margin-bottom: 20px;
