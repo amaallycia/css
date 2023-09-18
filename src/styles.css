@@ -27,7 +27,7 @@ h2 {
   text-align: center;
   font-size: 50px;
 }
-img {
+.float-left {
   color: #ededf7;
   font-size: 150px;
   padding-left: 110px;
@@ -106,16 +106,13 @@ input[type="submit"]:hover {
   background-color: #0505ee;
 }
 
-.material-symbols-outlined {
+.weather-date {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  font-size: 50px;
-  border-radius: 20px;
-  background-color: #f8f9fc9f;
-  padding: 10px 10px;
-  border: none;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color: #4bf759;
   text-align: center;
-  color: #18181a;
-  padding-top: 60px;
+  font-weight: bold;
 }
 footer {
   color: #18181a;
@@ -125,4 +122,17 @@ footer {
 }
 a {
   cursor: pointer;
+}
+.image {
+  width: 150px;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+.temperature-readings {
+  text-align: center;
+  font-size: 30px;
+  color: palevioletred;
+  padding-top: 0;
+  font-style: italic;
 }
