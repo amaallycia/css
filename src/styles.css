@@ -10,6 +10,7 @@ body {
     #005700 90%,
     #002400 100%
   );
+  width: 100%;
 }
 h1 {
   font-size: 50px;
@@ -107,7 +108,7 @@ input[type="submit"]:hover {
 
 .weather-date {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Times New Roman", Times, serif;
   color: #4bf759;
   text-align: center;
@@ -130,8 +131,12 @@ a {
 }
 .temperature-readings {
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(243, 230, 243);
   padding-top: 0;
   font-style: italic;
+}
+.maybe {
+  display: inline flex;
+  padding: 20px;
 }

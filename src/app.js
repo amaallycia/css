@@ -2,10 +2,41 @@ let now = new Date();
 
 let hours = now.getHours();
 let minutes = now.getMinutes();
-let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
+let days = [
+  "SUNDAY",
+  "MONDAY",
+  "TUESDAY",
+  "WEDNSDAY",
+  "THURSDAY",
+  "FRIDAY",
+  "SATURDAY",
+];
 let day = days[now.getDay()];
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${day},${hours}:${minutes}`;
+function fivedaysforcast() {
+  let forecastElement = document.querySelector("#Forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["MON", "TUE", "WED", "THUR"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+      <div class="col-3">
+          <div class="weather-date">${day}</div>
+          <img
+            src="https://openweathermap.org/img/wn/04d@2x.png"
+            class="image"
+          />
+          <div class="temperature-readings">
+            <span class="minimum-temperature">16°</span
+            ><span class="maxmum-temperature">-25°</span>
+          </div>
+        </div>
+      </div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -42,3 +73,4 @@ let h5 = document.querySelector("h5");
 h5.addEventListener("submit", handleSubmit);
 
 searchCity("Blantyre");
+fivedaysforcast();
