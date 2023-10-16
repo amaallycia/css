@@ -2,8 +2,8 @@ body {
   border-radius: 20px;
   background-image: linear-gradient(
     to bottom,
-    #b4ddb4 0%,
-    #83c783 12%,
+    #f0f1f1 0%,
+    #4ff14f 12%,
     #52b152 25%,
     #008a00 48%,
     #005700 90%,
@@ -20,7 +20,7 @@ h1 {
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
-  top: 140px;
+  top: 100px;
   color: #2c312c;
 }
 
@@ -88,22 +88,23 @@ h4 {
   font-size: 50px;
 }
 input[type="submit"] {
-  background: #207cca;
+  background: #78f76c;
   border-radius: 30px;
-  padding: 15px 50px;
+  padding: 15px 30px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  color: #ededf7;
+  color: #555566;
+  font-style: normal;
 }
 input[type="search"] {
-  padding: 15px 50px;
+  padding: 15px 30px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #0505ee;
+  background-color: #34d33c;
 }
 
 .weather-date {
@@ -135,8 +136,4 @@ a {
   color: rgb(243, 230, 243);
   padding-top: 0;
   font-style: italic;
-}
-.maybe {
-  display: inline flex;
-  padding: 20px;
 }

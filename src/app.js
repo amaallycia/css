@@ -14,10 +14,10 @@ let days = [
 let day = days[now.getDay()];
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${day},${hours}:${minutes}`;
-function fivedaysforcast() {
+function Fivedaysforcast() {
   let forecastElement = document.querySelector("#Forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["MON", "TUE", "WED", "THUR"];
+  let days = ["MON", "TUE", "WED"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -32,20 +32,28 @@ function fivedaysforcast() {
             <span class="minimum-temperature">16°</span
             ><span class="maxmum-temperature">-25°</span>
           </div>
-        </div>
+       
       </div>`;
-    forecastElement.innerHTML = forecastHTML;
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+function getforecast(coords) {
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid={API key}&units={metrics}`;
 }
 
 function displayWeatherCondition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("h4").innerHTML = Math.round(response.data.main.temp);
-  iconElement.setAttribute(
+  document.querySelector("section").innerHTML = response.data.weather[0].main;
+
+  getforecast(response.data.coord);
+  document.querySelector("h2").innerHTML = response.data.weather[0].icon;
+  h2Element.setAttribute(
     "src",
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  document.querySelector("section").innerHTML = response.data.weather[0].main;
+  h2Element.setAttribute("alt", response.data.weather[0].section);
 }
 function searchCity(city) {
   let apiKey = "ebce50d94ede40a4e61876fb290cd8e4";
@@ -68,9 +76,9 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-let iconElement = document.querySelector("h2");
+
 let h5 = document.querySelector("h5");
 h5.addEventListener("submit", handleSubmit);
 
 searchCity("Blantyre");
-fivedaysforcast();
+Fivedaysforcast();
